@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 import { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-import { HomeIcon } from "@radix-ui/react-icons";
+import { HomeIcon, MagnifyingGlassIcon } from "@radix-ui/react-icons";
 import { FloatingNav } from "@/components/ui/floating_navbar";
 
 gsap.registerPlugin(ScrollToPlugin);
@@ -35,9 +35,9 @@ export default function Home() {
       icon: <HomeIcon  className="h-4 w-4 text-neutral-500 dark:text-white"/>
     },
     {
-      name:"Home",
-      link: "/",
-      icon: <HomeIcon  className="h-4 w-4 text-neutral-500 dark:text-white"/>
+      name:"Browse",
+      link: "#browse",
+      icon: <MagnifyingGlassIcon  className="h-4 w-4 text-neutral-500 dark:text-white"/>
     },
     {
       name:"Home",

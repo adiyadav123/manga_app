@@ -8,8 +8,14 @@ import { Toast } from "./ui/toast";
 import { useToast } from "./ui/use-toast";
 import MangaCard from "./MangaCard";
 import { BackgroundBeams, FlipWords } from "./flip_words";
+import { useRouter } from "next/navigation";
 
 const InputLayout = () => {
+  
+
+  const router = useRouter();
+
+
   const searchAlt = ["Browse", "Search", "Find", "Discover", "Explore"];
   let famousManga = [
     "Naruto",
@@ -72,8 +78,14 @@ const InputLayout = () => {
     searchManga(famousManga[rand]);
   }, []);
 
+
+  const chapterPush = (mangaId) => {
+    router.push(`/read/${mangaId}`)
+  }
+
   return (
     <div className=" flex items-center justify-center w-full flex-col">
+    <a name="browse"></a>
       <h1 className="lg:text-[60px] p-[20px] pt-[40px] sm:text-[40px]"><FlipWords words={searchAlt} duration={1000} /></h1>
       <div className="w-full flex items-center justify-center p-2 ">
         <Input
@@ -107,7 +119,9 @@ const InputLayout = () => {
         {Manga?.length > 0 ? (
           <div className="grid sm:grid-cols-1 lg:grid-cols-4 gap-2 w-full">
             {Manga.map((manga) => (
-              <div key={manga.id} className="p-[10px]">
+              <div key={manga.id} className="p-[10px]" onClick={() => {
+                chapterPush(manga.id)
+              }}>
                 <MangaCard manga={manga} />
               </div>
             ))}

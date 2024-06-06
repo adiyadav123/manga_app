@@ -9,6 +9,7 @@ import {
 import { cn } from "@/utils/cn";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { SignedIn, UserButton, SignedOut, SignInButton } from "@clerk/nextjs";
 
 export const FloatingNav = ({
   navItems,
@@ -34,12 +35,6 @@ export const FloatingNav = ({
       }
     }
   });
-
-  const router = useRouter();
-
-  const loginHandle = () => {
-    router.push("/auth");
-  }
   
   return (
     <AnimatePresence mode="wait">
@@ -72,8 +67,15 @@ export const FloatingNav = ({
             <span className="hidden sm:block text-sm">{navItem.name}</span>
           </Link>
         ))}
-        <button className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full" onClick={loginHandle}>
-          <span>Login</span>
+        <button className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full">
+          <span>
+          <SignedOut>
+              <SignInButton />
+            </SignedOut>
+            <SignedIn>
+              <UserButton />
+            </SignedIn>
+          </span>
           <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent  h-px" />
         </button>
       </motion.div>
