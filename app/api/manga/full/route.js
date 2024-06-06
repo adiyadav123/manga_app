@@ -10,7 +10,7 @@ export async function POST(request) {
         });
     }
     const name = nameObj.name;
-    const response = await fetch('http://localhost:3000/api/manga/search', {
+    const response = await fetch('https://mangafam.vercel.app/api/manga/search', {
         method: "POST",
         headers: {
             "Content-Type": "application/json"

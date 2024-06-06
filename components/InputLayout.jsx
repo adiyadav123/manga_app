@@ -56,7 +56,7 @@ const InputLayout = () => {
 
       setIsButtonClicked(false);
 
-      const response = await fetch("http://localhost:3000/api/manga/full", {
+      const response = await fetch("https://mangafam.vercel.app/api/manga/full", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

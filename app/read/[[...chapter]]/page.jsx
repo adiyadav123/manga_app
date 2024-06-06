@@ -7,7 +7,7 @@
 
     useEffect(() => {
       const fetchChapter = async () => {
-        const res = await fetch("http://localhost:3000/api/chapter/feed", {
+        const res = await fetch("https://mangafam.vercel.app/api/chapter/feed", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
