@@ -1,7 +1,9 @@
 import { NextResponse } from "next/server";
 import axios from "axios";
+import corsMiddleware from "../../_middlewares/cors";
 
 export async function POST(request){
+    await corsMiddleware(request, NextResponse);
     const nameObj = await request.json();
     if (!nameObj) return NextResponse.error("Name is required", { status: 400 });
     const name = nameObj.name;

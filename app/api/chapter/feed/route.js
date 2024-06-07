@@ -1,8 +1,10 @@
 import axios from "axios";
 import { NextResponse } from "next/server";
+import corsMiddleware from "../../_middlewares/cors";
 
 
 export async function POST(request) {
+    await corsMiddleware(request, NextResponse);
     const obj = await request.json();
     if(!obj.id) {
         return NextResponse.json({
