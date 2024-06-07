@@ -16,12 +16,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <script
-          async="async"
-          data-cfasync="false"
-          src="//pl23502765.highcpmgate.com/108fb0849e665a8897f61751716b6c74/invoke.js"
-        ></script>
-        <div id="container-108fb0849e665a8897f61751716b6c74"></div>
+        
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
