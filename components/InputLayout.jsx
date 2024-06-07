@@ -56,7 +56,7 @@ const InputLayout = () => {
 
       setIsButtonClicked(false);
 
-      const response = await fetch("https://mangafam.vercel.app/api/manga/full", {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_DOMAIN}/api/manga/full`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -75,6 +75,7 @@ const InputLayout = () => {
   );
 
   useEffect(() => {
+    console.log(process.env.NEXT_DOMAIN);
     searchManga(famousManga[rand]);
   }, []);
 

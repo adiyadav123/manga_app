@@ -11,7 +11,7 @@ export async function POST(request) {
     const name = nameObject.name;
     const baseURL = "https://api.mangadex.org";
 
-    const response = await fetch('https://mangafam.vercel.app/api/manga/search', {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_DOMAIN}/api/manga/search`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",

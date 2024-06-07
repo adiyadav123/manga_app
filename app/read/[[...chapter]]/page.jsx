@@ -1,30 +1,33 @@
-  "use client";
+"use client";
 
-  import React, { useEffect } from "react";
+import React, { useEffect } from "react";
 
-  const ChapterReadingPage = ({ params }) => {
-    const mangaId = params.chapter[0];
+const ChapterReadingPage = ({ params }) => {
+  const mangaId = params.chapter[0];
 
-    useEffect(() => {
-      const fetchChapter = async () => {
-        const res = await fetch("/api/chapter/feed", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ id: mangaId }),
-        });
+  useEffect(() => {
+    const fetchChapter = async () => {
+      const res = await fetch("/api/chapter/feed", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ id: mangaId }),
+      });
 
-        const data = await res.json();
+      const data = await res.json();
 
-        console.log(data);
-      };
+      console.log(data);
+      console.log(process.env.NEXT_PUBLIC_DOMAIN)
+    };
 
-      fetchChapter();
-    });
+    fetchChapter();
+  });
 
-    return <div>ChapterReadingPage: {mangaId}</div>;
-  };
+  return (
+    <div>ChapterReadingPage: {mangaId}
+    </div>
+  );
+};
 
-  export default ChapterReadingPage;
-
+export default ChapterReadingPage;
