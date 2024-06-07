@@ -16,7 +16,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2370912465550854"
+          crossorigin="anonymous"
+        ></script>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
