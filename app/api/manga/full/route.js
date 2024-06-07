@@ -1,8 +1,6 @@
 import { NextResponse } from "next/server";
-import corsMiddleware from "../../_middlewares/cors";
 
 export async function POST(request) {
-    await corsMiddleware(request, NextResponse);
     const nameObj = await request.json();
     if (!nameObj.name) {
         return NextResponse.json({
