@@ -15,6 +15,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <meta
+          name="google-adsense-account"
+          content="ca-pub-2370912465550854"
+        ></meta>
+      </head>
       <body className={inter.className}>
         <script
           async
