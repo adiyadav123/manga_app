@@ -40,5 +40,8 @@ export async function POST(request) {
     
     return NextResponse.json({
         data: mangaData
-    })
+    }, { headers: {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+    }})
 }

@@ -39,5 +39,8 @@ export async function POST(request){
     return NextResponse.json({
         data: data,
         wholeData: wholeData
-    });
+    }, { headers: {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+    } });
 }
