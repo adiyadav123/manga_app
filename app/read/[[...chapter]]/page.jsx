@@ -1,5 +1,6 @@
 "use client";
 
+import ChapterPage from "@/components/ChapterPage";
 import React, { useEffect } from "react";
 
 const ChapterReadingPage = ({ params }) => {
@@ -25,7 +26,8 @@ const ChapterReadingPage = ({ params }) => {
   });
 
   return (
-    <div>ChapterReadingPage: {mangaId}
+    <div>
+      <ChapterPage mangaId={mangaId} />
     </div>
   );
 };

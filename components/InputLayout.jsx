@@ -28,8 +28,6 @@ const InputLayout = () => {
     "Bleach",
     "Demon Slayer: Kimetsu no Yaiba",
     "One Punch Man",
-    "Tokyo Ghoul",
-    "Hunter x Hunter",
     "JoJo's Bizarre Adventure",
     "Sword Art Online",
     "Black Clover",

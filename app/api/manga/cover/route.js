@@ -29,6 +29,9 @@ export async function POST(request) {
 
     return NextResponse.json({
         cover: `https://uploads.mangadex.org/covers/${mangaId}/${cover}`
-    });
+    }, { headers: {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+    }});
 
 }
