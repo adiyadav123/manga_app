@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect } from "react";
+import { HomeIcon, MagnifyingGlassIcon } from "@radix-ui/react-icons";
 
 const ChapterReadingPage = ({ params }) => {
   const mangaId = params.chapter[0];
@@ -20,10 +21,7 @@ const ChapterReadingPage = ({ params }) => {
     },
   ];
 
-  return (
-    <div>ChapterReadingPage: {mangaId}
-    </div>
-  );
+  return <div>ChapterReadingPage: {mangaId}</div>;
 };
 
 export default ChapterReadingPage;
