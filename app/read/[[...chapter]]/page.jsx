@@ -1,8 +1,5 @@
 "use client";
 
-import ChapterHead from "@/components/ChapterHead";
-import { FloatingNav } from "@/components/ui/floating_navbar";
-import { HomeIcon, MagnifyingGlassIcon } from "@radix-ui/react-icons";
 import React, { useEffect } from "react";
 
 const ChapterReadingPage = ({ params }) => {
@@ -24,9 +21,7 @@ const ChapterReadingPage = ({ params }) => {
   ];
 
   return (
-    <div>
-      <FloatingNav navItems={navItems} />
-      <ChapterHead mangaId={mangaId} />
+    <div>ChapterReadingPage: {mangaId}
     </div>
   );
 };
