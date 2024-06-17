@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
-          enableSystem
+          enableSystemd 
           disableTransitionOnChange
         >
           <ClerkProvider>{children}</ClerkProvider>
