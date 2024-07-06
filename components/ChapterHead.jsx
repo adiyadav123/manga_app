@@ -20,6 +20,8 @@ const ChapterHead = ({ mangaId }) => {
         </div>
         <div className="text-lg text-white dark:text-white">
           {mangaId}
+          <p>Still under development...</p>
+  <p>Sorry for the inconvenience caused, we are taking time to complete the project because there is a slight change in the API. </p>
         </div>
       </motion.div>
     </AuroraBackground>
